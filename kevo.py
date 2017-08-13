@@ -36,13 +36,11 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
 
 class KevoDevice(LockDevice):
     """Representation of a Kevo Lock."""
-    from pykevoplus import KevoLock
 
     def __init__(self, kevo):
         """Initialize an Kevo Lock."""
         self._kevo = kevo
         self._name = kevo.name
-        self._id = None
         self._state = None
 
     @property
