@@ -51,14 +51,7 @@ class KevoDevice(LockDevice):
     @property
     def is_locked(self):
         """Return true if lock is locked."""
-        return self._state
-        
-    @property
-    def state(self) -> str:
-        """Get the state of the device."""
-        if self._kevo.IsLocked():
-            return STATE_LOCKED
-        return STATE_UNLOCKED
+        return self._state == "locked"
 
     def lock(self, **kwargs):
         """Instruct the lock to lock."""
@@ -73,9 +66,4 @@ class KevoDevice(LockDevice):
 
         This is the only method that should fetch new data for Home Assistant.
         """
-        self._state = self._kevo.GetBoltState()
-        
-    @property
-    def device_state_attributes(self) -> dict:
-        """Return the state attributes."""
-        attributes = {}
+        self._state = self._kevo.GetBoltState().lower()
