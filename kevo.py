@@ -66,4 +66,5 @@ class KevoDevice(LockDevice):
 
         This is the only method that should fetch new data for Home Assistant.
         """
+        self._kevo.EndSession()
         self._state = self._kevo.GetBoltState().lower()
