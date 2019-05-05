@@ -18,7 +18,6 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Required(CONF_PASSWORD): cv.string,
 })
 
-
 def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup the Kevo platform."""
     from pykevoplus import Kevo
