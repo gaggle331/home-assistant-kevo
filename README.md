@@ -1,8 +1,8 @@
-# homeassistant custom components - kevo
+# Hass.io custom component - kevo
 
-## Requirements
+## Needed python module
 
-Make sure 'pykevocontrol' requirements installing properly in '/deps' folder. Can be found here: https://github.com/Bahnburner/pykevoplus/tree/master/pykevoplus
+The ```pykevocontrol``` module is automatically installed when first used of this custom component on Hass.io.
 
 ## Kevo lock integration
 
