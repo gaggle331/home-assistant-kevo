@@ -11,6 +11,7 @@ Copy the files from the directories into your homeassistant directory.
 ```
 custom_components/kevo/__init__.py
 custom_components/kevo/lock.py
+custom_components/kevo/manifest.json
 ```
 
 congifuration.yaml file entry:
