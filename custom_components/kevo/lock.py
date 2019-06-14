@@ -7,9 +7,6 @@ from homeassistant.components.lock import LockDevice, PLATFORM_SCHEMA
 from homeassistant.const import CONF_EMAIL, CONF_PASSWORD, STATE_LOCKED, STATE_UNLOCKED
 import homeassistant.helpers.config_validation as cv
 
-# Home Assistant depends on 3rd party packages for API specific code.
-REQUIREMENTS = ['pykevocontrol==2.0.0']
-
 _LOGGER = logging.getLogger(__name__)
 
 # Validation of the user's configuration
