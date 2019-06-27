@@ -1,0 +1,8 @@
+{
+  "domain": "Kevo",
+  "name": "Kevo Lock",
+  "documentation": "https://github.com/plmilord/Hass.io-custom-component-Kevo/blob/master/README.md",
+  "dependencies": [],
+  "codeowners": ["bahnburner/gaggle331/plmilord"],
+  "requirements": ["pykevocontrol==2.0.0"]
+}
