@@ -1,4 +1,4 @@
-# Hass.io custom component - kevo
+# Hass.io custom component - Kevo
 
 ## Needed python module
 
