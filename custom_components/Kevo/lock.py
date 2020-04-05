@@ -8,6 +8,7 @@ from homeassistant.const import CONF_EMAIL, CONF_PASSWORD, STATE_LOCKED, STATE_U
 import homeassistant.helpers.config_validation as cv
 
 _LOGGER = logging.getLogger(__name__)
+CONF_LOCK_ID = "lock_id"
 
 # Validation of the user's configuration
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
