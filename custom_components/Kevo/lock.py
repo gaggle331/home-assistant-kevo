@@ -25,6 +25,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
     # present.
     email = config.get(CONF_EMAIL)
     password = config.get(CONF_PASSWORD)
+    lock_id = config.get(CONF_LOCK_ID)
 
     # Setup connection with devices/cloud (broken as of 9 Sep 2019 due to CAPTCHA changes)
     # kevos = Kevo.GetLocks(email, password)
