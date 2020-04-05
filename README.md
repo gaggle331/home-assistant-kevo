@@ -1,5 +1,7 @@
 # Hass.io custom component - Kevo
 
+Update: As of 9 Sep 2019, pykevoplus:Kevo.GetLocks() can no longer pull lock ids due to CAPTCHA changes. This fork does NOT pull lock ids, but rather requires you to specify one specific lock via the lock_id attribute in order to connect a Kevo lock to Home Assistant.
+
 ## What you need
 
 - A Kevo smart lock
@@ -27,7 +29,9 @@ lock:
   - platform: Kevo
     email: KEVO_ACCOUNT_EMAIL         # Your Kevo account Email
     password: KEVO_ACCOUNT_PASSWORD   # Your Kevo account Password
+    lock_id: KEVO_LOCK_ID             # Your Kevo lock id (obtained manually from kevo website*)
 ```
+\* instructions for obtaining lock id can be found at: https://github.com/davidlang42/pykevoplus3
      
 ## TODOs
 
