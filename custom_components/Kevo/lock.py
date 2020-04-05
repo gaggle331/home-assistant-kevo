@@ -13,22 +13,25 @@ _LOGGER = logging.getLogger(__name__)
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Required(CONF_EMAIL): cv.string,
     vol.Required(CONF_PASSWORD): cv.string,
+    vol.Required(CONF_LOCK_ID): cv.string,
 })
 
 def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup the Kevo platform."""
-    from pykevoplus import Kevo
+    from pykevoplus import KevoLock
 
     # Assign configuration variables. The configuration check takes care they are
     # present.
     email = config.get(CONF_EMAIL)
     password = config.get(CONF_PASSWORD)
 
-    # Setup connection with devices/cloud
-    kevos = Kevo.GetLocks(email, password)
+    # Setup connection with devices/cloud (broken as of 9 Sep 2019 due to CAPTCHA changes)
+    # kevos = Kevo.GetLocks(email, password)
+    # add_devices(KevoDevice(kevo) for kevo in kevos)
 
-    # Add devices
-    add_devices(KevoDevice(kevo) for kevo in kevos)
+    # Setup manual connection with specified device
+    kevo = KevoLock.FromLockID(lock_id, email, password)
+    add_devices([KevoDevice(kevo)])
 
 class KevoDevice(LockDevice):
     """Representation of a Kevo Lock."""
