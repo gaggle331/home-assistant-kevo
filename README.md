@@ -1,5 +1,7 @@
 # Hass.io custom component - Kevo
 
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)
+
 Update: As of 9 Sep 2019, pykevoplus:Kevo.GetLocks() can no longer pull lock ids due to CAPTCHA changes. This fork does NOT pull lock ids, but rather requires you to specify one specific lock via the lock_id attribute in order to connect a Kevo lock to Home Assistant.
 
 ## What you need
