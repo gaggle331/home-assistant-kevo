@@ -3,6 +3,6 @@
   "name": "Kevo Lock",
   "documentation": "https://github.com/davidlang42/home-assistant-kevo/blob/master/README.md",
   "dependencies": [],
-  "codeowners": ["bahnburner/gaggle331/plmilord/davidlang42"],
+  "codeowners": ["bahnburner/gaggle331/plmilord", "davidlang42"],
   "requirements": ["pykevocontrol==2.0.0"]
 }
