@@ -16,7 +16,9 @@ The ```pykevocontrol``` module is automatically installed when first used of thi
 
 ## Kevo custom component setup
 
-Copy these project files into your Home Assistant ```/config``` directory.
+This component can be added by adding the GitHub repository URL into the HACS system.
+
+Alternatively, you can copy these project files into your Home Assistant ```/config``` directory:
 
 ```
 custom_components/Kevo/__init__.py
@@ -24,7 +26,7 @@ custom_components/Kevo/lock.py
 custom_components/Kevo/manifest.json
 ```
 
-congifuration.yaml file entry:
+Once installed, add this to your congifuration.yaml file:
 ```
 # Locks controls
 lock:
@@ -32,10 +34,13 @@ lock:
     email: KEVO_ACCOUNT_EMAIL         # Your Kevo account Email
     password: KEVO_ACCOUNT_PASSWORD   # Your Kevo account Password
     lock_id: KEVO_LOCK_ID             # Your Kevo lock id (obtained manually from kevo website*)
+    max_retries: 3                    # Optionally set how many times it should try to initalise the lock
+    retry_delay: 2                    # Optionally set the delay (in seconds) between each retry
 ```
-\* instructions for obtaining lock id can be found at: https://github.com/davidlang42/pykevoplus3
+\* You can get the lock IDs manually by logging into mykevo.com, click Details for the lock, click Settings, the lock ID is on the right.
      
 ## TODOs
 
-- 
+- handle multiple kevo locks with the same or different account credentials
+- set friendly name for devices
 
