@@ -34,7 +34,7 @@ lock:
     email: KEVO_ACCOUNT_EMAIL         # Your Kevo account Email
     password: KEVO_ACCOUNT_PASSWORD   # Your Kevo account Password
     locks:
-	  - lock_id: KEVO_LOCK_ID             # Your Kevo lock id (obtained manually from kevo website*)
+      - lock_id: KEVO_LOCK_ID             # Your Kevo lock id (obtained manually from kevo website*)
         max_retries: 3                    # Optionally set how many times it should try to initalise the lock
         retry_delay: 2                    # Optionally set the delay (in seconds) between each retry
 ```
