@@ -1,0 +1,8 @@
+{
+  "domain": "kevo_plus",
+  "name": "Kevo Plus",
+  "documentation": "https://github.com/gauvingingras/kevo_plus",
+  "dependencies": [],
+  "codeowners": ["gauvingingras","bahnburner","gaggle331","plmilord","davidlang42"],
+  "requirements": ["pykevocontrol==2.0.0"]
+}

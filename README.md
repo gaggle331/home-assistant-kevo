@@ -30,12 +30,13 @@ Once installed, add this to your congifuration.yaml file:
 ```
 # Locks controls
 lock:
-  - platform: Kevo
+  - platform: kevo_plus
     email: KEVO_ACCOUNT_EMAIL         # Your Kevo account Email
     password: KEVO_ACCOUNT_PASSWORD   # Your Kevo account Password
-    lock_id: KEVO_LOCK_ID             # Your Kevo lock id (obtained manually from kevo website*)
-    max_retries: 3                    # Optionally set how many times it should try to initalise the lock
-    retry_delay: 2                    # Optionally set the delay (in seconds) between each retry
+    locks:
+      - lock_id: KEVO_LOCK_ID             # Your Kevo lock id (obtained manually from kevo website*)
+        max_retries: 3                    # Optionally set how many times it should try to initalise the lock
+        retry_delay: 2                    # Optionally set the delay (in seconds) between each retry
 ```
 \* You can get the lock IDs manually by logging into mykevo.com, click Details for the lock, click Settings, the lock ID is on the right.
      
